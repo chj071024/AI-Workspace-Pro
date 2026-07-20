@@ -1,0 +1,465 @@
+/* ========================================
+   Home CSS — 首页特定模块样式
+   Hero / Tech Stack / Services / Why Me
+   Projects / Workflow / About / Skills / CTA
+   ======================================== */
+
+/* ==========================================
+   1. Hero — 左文右图双列布局
+   ========================================== */
+
+.hero {
+  padding-top: calc(var(--header-height) + var(--space-24));
+  padding-bottom: var(--space-24);
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: var(--space-20);
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 560px;
+}
+
+.hero__label {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-4);
+}
+
+.hero__title {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+  line-height: var(--leading-none);
+  letter-spacing: var(--tracking-tighter);
+  margin-bottom: var(--space-6);
+}
+
+.hero__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 480px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.hero__actions--center {
+  justify-content: center;
+}
+
+.hero__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__figure {
+  width: 100%;
+  max-width: 520px;
+}
+
+.hero__image {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  animation: heroFadeIn 600ms var(--ease-out) 200ms both;
+}
+
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__image .icon {
+  width: 64px;
+  height: 64px;
+  color: var(--color-gray-300);
+}
+
+.hero__caption {
+  margin-top: var(--space-4);
+  text-align: center;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-500);
+  letter-spacing: var(--tracking-wide);
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   2. Tech Stack — Logo Grid
+   ========================================== */
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-4);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast),
+              transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.tech-card:hover {
+  border-color: var(--color-gray-300);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.tech-card__icon {
+  width: 36px;
+  height: 36px;
+  color: var(--color-gray-400);
+  transition: color var(--transition-fast);
+}
+
+.tech-card:hover .tech-card__icon {
+  color: var(--color-accent);
+}
+
+.tech-card__name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-gray-600);
+  text-align: center;
+}
+
+/* ==========================================
+   3. Services — 3 张详细服务卡片
+   ========================================== */
+
+.service-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal),
+              box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-accent);
+  margin-bottom: var(--space-5);
+}
+
+.service-card__title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-3);
+}
+
+.service-card__intro {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-5);
+}
+
+.service-card__clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.service-card__list {
+  margin-bottom: var(--space-6);
+  flex: 1;
+}
+
+.service-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+  padding-bottom: var(--space-2);
+}
+
+.service-card__list li:last-child {
+  padding-bottom: 0;
+}
+
+.service-card__check {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  color: var(--color-accent);
+}
+
+.service-card__cta {
+  margin-top: auto;
+}
+
+/* ==========================================
+   4. Why Me — 2×2 优势网格
+   ========================================== */
+
+.why-item {
+  padding: var(--space-6);
+}
+
+.why-item__icon {
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.why-item h4 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.why-item p {
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* ==========================================
+   5. Workflow — 3×2 网格流程
+   ========================================== */
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.workflow-step {
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  transition: background-color var(--transition-fast);
+}
+
+.workflow-step:hover {
+  background-color: var(--color-gray-50);
+}
+
+.workflow-step__number {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.workflow-step__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.workflow-step__desc {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* ==========================================
+   6. About Me — 窄栏文字块
+   ========================================== */
+
+.about-text {
+  font-size: var(--text-lg);
+  color: var(--color-gray-700);
+  line-height: var(--leading-loose);
+}
+
+.about-text p {
+  margin-bottom: var(--space-5);
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   7. Skills — 分组标签云
+   ========================================== */
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+.skills-group__title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-3);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ==========================================
+   8. CTA Section
+   ========================================== */
+
+.cta-hint {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+}
+
+.cta-hint a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cta-hint a:hover {
+  color: var(--color-accent-light);
+}
+
+/* ==========================================
+   9. Responsive — 仅首页特有响应式规则
+   （通用响应式已集中在 responsive.css）
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .hero__media {
+    order: -1;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__figure {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--header-height-mobile) + var(--space-12));
+    padding-bottom: var(--space-12);
+  }
+
+  .hero__media {
+    order: -1;
+  }
+
+  .hero__title {
+    font-size: var(--text-4xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-base);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero__figure {
+    max-width: 100%;
+  }
+
+  .hero__image {
+    aspect-ratio: 9 / 16;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    padding: var(--space-6);
+  }
+
+  .workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-text {
+    font-size: var(--text-base);
+  }
+}

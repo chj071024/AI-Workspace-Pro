@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="相逢的服务 — AI自动化、网站开发、小程序开发，为创作者和小企业提供专业技术服务">
+  <meta name="keywords" content="AI自动化,网站开发,小程序开发,AI Agent,独立开发者">
+
+  <meta property="og:title" content="服务 — 相逢">
+  <meta property="og:description" content="AI自动化 · 网站开发 · 小程序开发">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="服务 — 相逢">
+
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+
+  <title>服务 — 相逢 | AI自动化 · 网站开发 · 小程序开发</title>
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/images/icons/icons.svg" as="image" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* ===== Service Hero ===== */
+    .service-hero {
+      padding-top: calc(var(--header-height) + var(--space-20));
+      padding-bottom: var(--space-12);
+    }
+
+    .service-hero__icon {
+      width: 48px;
+      height: 48px;
+      color: var(--color-accent);
+      margin-bottom: var(--space-5);
+    }
+
+    .service-hero__title {
+      font-size: var(--text-5xl);
+      font-weight: var(--font-bold);
+      color: var(--color-gray-900);
+      line-height: var(--leading-none);
+      letter-spacing: var(--tracking-tighter);
+      margin-bottom: var(--space-4);
+    }
+
+    .service-hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      max-width: 600px;
+    }
+
+    /* ===== Service Detail Block ===== */
+    .service-detail {
+      padding-top: var(--space-16);
+      padding-bottom: var(--space-16);
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .service-detail:last-child {
+      border-bottom: none;
+    }
+
+    .service-detail__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      align-items: start;
+    }
+
+    .service-detail__label {
+      display: inline-block;
+      font-size: var(--text-xs);
+      font-weight: var(--font-semibold);
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      margin-bottom: var(--space-3);
+    }
+
+    .service-detail__title {
+      font-size: var(--text-3xl);
+      font-weight: var(--font-semibold);
+      color: var(--color-gray-900);
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-4);
+    }
+
+    .service-detail__intro {
+      font-size: var(--text-lg);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-6);
+    }
+
+    .service-detail__list {
+      margin-bottom: var(--space-8);
+    }
+
+    .service-detail__list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      font-size: var(--text-base);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      padding-bottom: var(--space-3);
+    }
+
+    .service-detail__check {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      color: var(--color-accent);
+    }
+
+    .service-detail__section-title {
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      color: var(--color-gray-800);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      margin-bottom: var(--space-4);
+    }
+
+    .service-detail__scenarios {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .scenario-card {
+      padding: var(--space-5);
+      background-color: var(--color-gray-50);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-gray-200);
+    }
+
+    .scenario-card__title {
+      font-size: var(--text-base);
+      font-weight: var(--font-semibold);
+      color: var(--color-gray-900);
+      margin-bottom: var(--space-1);
+    }
+
+    .scenario-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+    }
+
+    /* FAQ inline */
+    .service-faq {
+      padding: var(--space-16) 0;
+    }
+
+    @media (max-width: 1024px) {
+      .service-detail__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+
+      .service-hero__title {
+        font-size: var(--text-4xl);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .service-hero {
+        padding-top: calc(var(--header-height-mobile) + var(--space-12));
+        padding-bottom: var(--space-8);
+      }
+
+      .service-hero__title {
+        font-size: var(--text-3xl);
+      }
+
+      .service-detail {
+        padding-top: var(--space-10);
+        padding-bottom: var(--space-10);
+      }
+
+      .service-detail__title {
+        font-size: var(--text-2xl);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-to-content">跳转到主要内容</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="回到首页">相逢</a>
+      <nav class="header__nav" aria-label="主导航">
+        <a href="index.html" data-page="index.html">首页</a>
+        <a href="about.html" data-page="about.html">关于</a>
+        <a href="services.html" data-page="services.html" class="active">服务</a>
+        <a href="projects.html" data-page="projects.html">作品</a>
+        <a href="contact.html" data-page="contact.html">联系</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary btn--sm header__cta">联系我</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">
+        <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
+    <a href="index.html" data-page="index.html">首页</a>
+    <a href="about.html" data-page="about.html">关于</a>
+    <a href="services.html" data-page="services.html">服务</a>
+    <a href="projects.html" data-page="projects.html">作品</a>
+    <a href="contact.html" data-page="contact.html">联系</a>
+    <a href="contact.html" class="btn btn--primary mobile-menu__cta">联系我</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===== Service Hero ===== -->
+    <section class="service-hero" aria-labelledby="service-hero-title">
+      <div class="container container--narrow text-center">
+        <span class="section__label">Services</span>
+        <h1 class="service-hero__title" id="service-hero-title">我能帮你做什么</h1>
+        <p class="service-hero__subtitle" style="margin: 0 auto;">
+          从线上展示到业务自动化，覆盖全链路的技术服务。每一项服务都基于真实项目经验，专注解决实际问题。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 服务1：AI 自动化 ===== -->
+    <section class="service-detail section--alt" id="ai-automation" aria-labelledby="ai-title">
+      <div class="container container--narrow">
+        <span class="service-detail__label">Service 01</span>
+        <h2 class="service-detail__title" id="ai-title">AI 自动化</h2>
+        <p class="service-detail__intro">
+          用 AI 让你的业务自动运转——智能客服、内容生成、数据处理、工作流自动化。减少重复劳动，让你专注于真正有价值的创造性工作。
+        </p>
+
+        <div class="service-detail__grid" style="margin-top: var(--space-8);">
+          <!-- 左列：服务清单 -->
+          <div>
+            <h3 class="service-detail__section-title">服务范围</h3>
+            <ul class="service-detail__list">
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>AI 工作流设计与搭建</strong><br>基于 n8n / Dify 平台，为你设计端到端的自动化工作流，打通不同工具之间的数据孤岛。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>智能客服 Agent 定制</strong><br>基于 Claude / OpenAI，搭建 7×24 自动运行的智能客服，支持多轮对话、知识库检索、人工无缝接管。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>内容生成 Pipeline</strong><br>从选题策划到内容创作到多平台分发，AI 辅助全流程，大幅降低内容生产成本。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>数据自动采集与处理</strong><br>自动抓取、清洗、分析数据，生成可视化报表。让数据驱动你的业务决策。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>AI API 集成与调试</strong><br>将 AI 能力集成到你的现有系统中——网站、小程序、内部工具都可以接入 AI。</span>
+              </li>
+            </ul>
+
+            <h3 class="service-detail__section-title">技术栈</h3>
+            <div class="cluster" style="margin-bottom: var(--space-8);">
+              <span class="tag tag--accent">n8n</span>
+              <span class="tag tag--accent">Dify</span>
+              <span class="tag tag--accent">OpenAI API</span>
+              <span class="tag tag--accent">Claude API</span>
+              <span class="tag tag--accent">Python</span>
+              <span class="tag tag--accent">Node.js</span>
+            </div>
+
+            <a href="contact.html" class="btn btn--primary">咨询 AI 自动化服务</a>
+          </div>
+
+          <!-- 右列：适用场景 -->
+          <div>
+            <h3 class="service-detail__section-title">适用场景</h3>
+            <div class="service-detail__scenarios">
+              <div class="scenario-card">
+                <div class="scenario-card__title">内容创作者</div>
+                <div class="scenario-card__desc">用 AI 辅助选题、撰写、排版到多平台分发，内容产出效率提升 3 倍以上。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">电商卖家</div>
+                <div class="scenario-card__desc">AI 客服自动处理 80% 常见问题，订单处理自动化，差评预警实时通知。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">自媒体团队</div>
+                <div class="scenario-card__desc">搭建从热点监控、内容生成到定时发布的完整 AI 内容工厂。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">中小企业</div>
+                <div class="scenario-card__desc">将重复性业务流程（数据录入、报表生成、邮件跟进）全部 AI 自动化，释放人力。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 服务2：网站开发 ===== -->
+    <section class="service-detail" id="web-development" aria-labelledby="web-title">
+      <div class="container container--narrow">
+        <span class="service-detail__label">Service 02</span>
+        <h2 class="service-detail__title" id="web-title">网站开发</h2>
+        <p class="service-detail__intro">
+          从个人品牌站到企业官网，高性能、SEO 友好、移动端体验一流的现代网站开发。不只是写代码，更关注你的业务目标和用户转化。
+        </p>
+
+        <div class="service-detail__grid" style="margin-top: var(--space-8);">
+          <div>
+            <h3 class="service-detail__section-title">服务范围</h3>
+            <ul class="service-detail__list">
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>个人品牌网站</strong><br>为独立开发者、设计师、创作者搭建专业可信的个人官网，展示作品、服务与个人故事。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>企业官网开发</strong><br>公司介绍、服务展示、团队呈现——为企业打造专业线上形象，提升客户信任度。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>Landing Page 设计与开发</strong><br>高转化率落地页，从文案策略到视觉设计到前端实现，专注单一目标——让访客变成客户。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>博客 / 内容站搭建</strong><br>SEO 友好的内容型网站，支持 Markdown 编辑、RSS 订阅、社交分享。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>SEO + 性能优化</strong><br>Lighthouse 95+ 评分、语义化 HTML、结构化数据、Core Web Vitals 全面达标。</span>
+              </li>
+            </ul>
+
+            <h3 class="service-detail__section-title">技术栈</h3>
+            <div class="cluster" style="margin-bottom: var(--space-8);">
+              <span class="tag tag--default">HTML5</span>
+              <span class="tag tag--default">CSS3</span>
+              <span class="tag tag--default">JavaScript</span>
+              <span class="tag tag--default">Node.js</span>
+              <span class="tag tag--default">Vercel</span>
+              <span class="tag tag--default">Cloudflare</span>
+            </div>
+
+            <a href="contact.html" class="btn btn--primary">咨询网站开发服务</a>
+          </div>
+
+          <div>
+            <h3 class="service-detail__section-title">适用场景</h3>
+            <div class="service-detail__scenarios">
+              <div class="scenario-card">
+                <div class="scenario-card__title">个人创作者</div>
+                <div class="scenario-card__desc">需要展示作品、吸引客户、建立个人品牌。一个专业网站让你从"朋友圈接单"升级为"品牌化运营"。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">创业公司</div>
+                <div class="scenario-card__desc">产品需要落地页、公司需要官网。快速搭建、SEO 就绪、支持后续迭代扩展。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">中小企业</div>
+                <div class="scenario-card__desc">大多数小企业的网站停留在 5 年前。重新设计一个现代、快速、移动友好的官网，提升客户第一印象。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">独立开发者</div>
+                <div class="scenario-card__desc">你需要的不只是简历——一个展示技术能力、项目案例、技术博客的个人网站，是最好的名片。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 服务3：小程序开发 ===== -->
+    <section class="service-detail section--alt" id="mini-program" aria-labelledby="mp-title">
+      <div class="container container--narrow">
+        <span class="service-detail__label">Service 03</span>
+        <h2 class="service-detail__title" id="mp-title">小程序开发</h2>
+        <p class="service-detail__intro">
+          微信生态获客利器。预约系统、商城、管理工具——轻量级应用快速上线，零下载成本触达 13 亿微信用户。让你的业务出现在用户每天使用的 App 里。
+        </p>
+
+        <div class="service-detail__grid" style="margin-top: var(--space-8);">
+          <div>
+            <h3 class="service-detail__section-title">服务范围</h3>
+            <ul class="service-detail__list">
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>微信小程序开发</strong><br>从零搭建微信小程序，覆盖前端界面、云函数后端、数据库设计，全流程交付。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>预约 / 点单系统</strong><br>适合本地商户的预约和点单小程序，支持在线支付、自动提醒、后台管理。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>微信商城</strong><br>完整的电商小程序解决方案，商品展示、购物车、订单管理、微信支付一键集成。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>后台管理系统</strong><br>搭配小程序的管理后台，数据可视化、用户管理、内容管理，让你轻松运营。</span>
+              </li>
+              <li>
+                <svg class="service-detail__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span><strong>小程序 + AI 集成</strong><br>在小程序中接入 AI 能力——智能客服、AI 推荐、图像识别，让你的小程序更聪明。</span>
+              </li>
+            </ul>
+
+            <h3 class="service-detail__section-title">技术栈</h3>
+            <div class="cluster" style="margin-bottom: var(--space-8);">
+              <span class="tag tag--default">微信原生框架</span>
+              <span class="tag tag--default">微信云开发</span>
+              <span class="tag tag--default">JavaScript</span>
+              <span class="tag tag--default">Node.js</span>
+              <span class="tag tag--default">Supabase</span>
+              <span class="tag tag--default">AI API</span>
+            </div>
+
+            <a href="contact.html" class="btn btn--primary">咨询小程序开发服务</a>
+          </div>
+
+          <div>
+            <h3 class="service-detail__section-title">适用场景</h3>
+            <div class="service-detail__scenarios">
+              <div class="scenario-card">
+                <div class="scenario-card__title">本地商户</div>
+                <div class="scenario-card__desc">餐饮、美容、家政、教育——用小程序实现在线预约和点单，减少 80% 手动预约工作。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">电商卖家</div>
+                <div class="scenario-card__desc">在微信生态内搭建自己的商城，无需跳转第三方平台，流量直接在微信内转化。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">服务型公司</div>
+                <div class="scenario-card__desc">咨询、法律、设计等服务型企业，通过小程序展示服务、收集线索、管理客户。</div>
+              </div>
+              <div class="scenario-card">
+                <div class="scenario-card__title">内容社区</div>
+                <div class="scenario-card__desc">搭建轻量级 UGC 社区小程序，支持用户发布、互动、AI 内容审核，快速冷启动。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section" aria-labelledby="service-cta-title">
+      <div class="container container--narrow text-center">
+        <h2 class="section__title" id="service-cta-title">不确定哪个服务适合你？</h2>
+        <p class="section__subtitle mb-8">告诉我你的业务场景，我帮你分析最适合的技术方案</p>
+        <a href="contact.html" class="btn btn--primary btn--lg">
+          <svg class="btn__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+          免费咨询
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">相逢</div>
+          <p class="footer__brand-desc">
+            独立开发者，专注 AI 自动化与 Web 开发。<br>
+            帮助创作者和小企业构建真正好用的数字产品。
+          </p>
+        </div>
+        <div>
+          <div class="footer__col-title">导航</div>
+          <div class="footer__links">
+            <a href="index.html">首页</a>
+            <a href="about.html">关于我</a>
+            <a href="services.html">服务</a>
+            <a href="projects.html">作品</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">服务</div>
+          <div class="footer__links">
+            <a href="services.html#ai-automation">AI 自动化</a>
+            <a href="services.html#web-development">网站开发</a>
+            <a href="services.html#mini-program">小程序开发</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">联系方式</div>
+          <div class="footer__links">
+            <a href="https://github.com/chj071024" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-github"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:2370083386@qq.com">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+              QQ 邮箱
+            </a>
+            <a href="mailto:xf2370083386@gmail.com">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+              Gmail
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 相逢. All rights reserved.</span>
+        <span>用 &hearts; 和 AI 构建</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">
+    <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-up"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

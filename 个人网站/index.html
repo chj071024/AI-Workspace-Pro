@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="独立开发者 | AI自动化 · 网站开发 · 小程序开发 — 为创作者和小企业提供高质量技术服务">
+  <meta name="keywords" content="网站开发,小程序开发,AI自动化,AI Agent,独立开发者,个人网站">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="相逢 — 独立开发者">
+  <meta property="og:description" content="AI自动化 · 网站开发 · 小程序开发">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:image" content="https://yourdomain.com/assets/images/og/og-default.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="相逢 — 独立开发者">
+  <meta name="twitter:description" content="AI自动化 · 网站开发 · 小程序开发">
+  <meta name="twitter:image" content="https://yourdomain.com/assets/images/og/og-default.jpg">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "相逢",
+    "url": "https://yourdomain.com",
+    "jobTitle": "独立开发者",
+    "description": "独立开发者，专注为创作者和小企业提供 AI 自动化和 Web 开发服务",
+    "knowsAbout": ["AI自动化", "网站开发", "小程序开发", "AI Agent"]
+  }
+  </script>
+
+  <title>相逢 — 独立开发者 | AI自动化 | 网站开发 | 小程序开发</title>
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preload" href="assets/images/icons/icons.svg" as="image" type="image/svg+xml">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-to-content">跳转到主要内容</a>
+
+  <!-- ==================== Header ==================== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="回到首页">相逢</a>
+      <nav class="header__nav" aria-label="主导航">
+        <a href="index.html" data-page="index.html" class="active">首页</a>
+        <a href="about.html" data-page="about.html">关于</a>
+        <a href="services.html" data-page="services.html">服务</a>
+        <a href="projects.html" data-page="projects.html">作品</a>
+        <a href="contact.html" data-page="contact.html">联系</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary btn--sm header__cta">联系我</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">
+        <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== Mobile Menu ==================== -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
+    <a href="index.html" data-page="index.html">首页</a>
+    <a href="about.html" data-page="about.html">关于</a>
+    <a href="services.html" data-page="services.html">服务</a>
+    <a href="projects.html" data-page="projects.html">作品</a>
+    <a href="contact.html" data-page="contact.html">联系</a>
+    <a href="contact.html" class="btn btn--primary mobile-menu__cta">联系我</a>
+  </div>
+
+  <!-- ==================== Main Content ==================== -->
+  <main id="main-content">
+
+    <!-- ===== 第1屏：Hero ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <span class="hero__label">Independent Developer</span>
+            <h1 class="hero__title" id="hero-title">
+              用 AI 和现代技术<br>为你构建真正好用的数字产品
+            </h1>
+            <p class="hero__subtitle">
+              独立开发者 · 专注 AI 自动化 · Web 开发 · 小程序开发<br>
+              为创作者和小企业提供从线上展示到业务自动化的完整技术服务
+            </p>
+            <div class="hero__actions">
+              <a href="projects.html" class="btn btn--primary btn--lg">
+                查看我的作品
+                <svg class="btn__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+              <a href="contact.html" class="btn btn--secondary btn--lg">
+                立即联系
+              </a>
+            </div>
+          </div>
+          <div class="hero__media">
+            <figure class="hero__figure">
+              <div class="hero__image">
+                <img src="img/22de55d3189460b4891e7b8646206906.jpg" alt="小红书运营助手 AI Agent 界面展示">
+              </div>
+              <figcaption class="hero__caption">小红书运营助手 Agent</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第2屏：Technology Stack ===== -->
+    <section class="section section--alt reveal" aria-labelledby="tech-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Tech Stack</span>
+          <h2 class="section__title" id="tech-title">技术栈</h2>
+          <p class="section__subtitle">我用这些工具构建产品</p>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card reveal reveal--d1">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-code"/></svg>
+            <span class="tech-card__name">HTML5</span>
+          </div>
+          <div class="tech-card reveal reveal--d1">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-layers"/></svg>
+            <span class="tech-card__name">CSS3</span>
+          </div>
+          <div class="tech-card reveal reveal--d2">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-zap"/></svg>
+            <span class="tech-card__name">JavaScript</span>
+          </div>
+          <div class="tech-card reveal reveal--d2">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-globe"/></svg>
+            <span class="tech-card__name">Node.js</span>
+          </div>
+          <div class="tech-card reveal reveal--d2">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-github"/></svg>
+            <span class="tech-card__name">Git & GitHub</span>
+          </div>
+          <div class="tech-card reveal reveal--d2">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-layers"/></svg>
+            <span class="tech-card__name">Docker</span>
+          </div>
+          <div class="tech-card reveal reveal--d3">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-sparkles"/></svg>
+            <span class="tech-card__name">OpenAI</span>
+          </div>
+          <div class="tech-card reveal reveal--d3">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-bot"/></svg>
+            <span class="tech-card__name">Claude</span>
+          </div>
+          <div class="tech-card reveal reveal--d3">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-zap"/></svg>
+            <span class="tech-card__name">n8n</span>
+          </div>
+          <div class="tech-card reveal reveal--d3">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-sparkles"/></svg>
+            <span class="tech-card__name">Dify</span>
+          </div>
+          <div class="tech-card reveal reveal--d4">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-globe"/></svg>
+            <span class="tech-card__name">Cloudflare</span>
+          </div>
+          <div class="tech-card reveal reveal--d4">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-zap"/></svg>
+            <span class="tech-card__name">Vercel</span>
+          </div>
+          <div class="tech-card reveal reveal--d4">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-layers"/></svg>
+            <span class="tech-card__name">Supabase</span>
+          </div>
+          <div class="tech-card reveal reveal--d4">
+            <svg class="tech-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-code"/></svg>
+            <span class="tech-card__name">Cursor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第3屏：Services ===== -->
+    <section class="section reveal" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Services</span>
+          <h2 class="section__title" id="services-title">我能帮你做什么</h2>
+          <p class="section__subtitle">从线上展示到业务自动化，覆盖全链路</p>
+        </div>
+
+        <div class="grid grid--3 mt-10">
+          <!-- 服务1：AI 自动化 -->
+          <div class="service-card reveal reveal--d1">
+            <svg class="service-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-sparkles"/></svg>
+            <h3 class="service-card__title">AI 自动化</h3>
+            <p class="service-card__intro">
+              用 AI 让你的业务自动运转——智能客服、内容生成、数据处理、工作流自动化，减少重复劳动，降本增效。
+            </p>
+            <div class="service-card__clients">
+              <span class="tag tag--default">内容创作者</span>
+              <span class="tag tag--default">电商卖家</span>
+              <span class="tag tag--default">小企业</span>
+            </div>
+            <ul class="service-card__list">
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                AI 工作流设计与搭建（n8n / Dify）
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                智能客服 Agent 定制
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                内容生成 Pipeline
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                数据自动采集与处理
+              </li>
+            </ul>
+            <div class="service-card__cta">
+              <a href="services.html#ai-automation" class="btn btn--secondary btn--sm">
+                了解 AI 自动化
+                <svg class="btn__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 服务2：网站开发 -->
+          <div class="service-card reveal reveal--d2">
+            <svg class="service-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-globe"/></svg>
+            <h3 class="service-card__title">网站开发</h3>
+            <p class="service-card__intro">
+              从个人品牌站到企业官网，高性能、SEO 友好、移动端体验一流的现代网站开发。
+            </p>
+            <div class="service-card__clients">
+              <span class="tag tag--default">个人创作者</span>
+              <span class="tag tag--default">创业公司</span>
+              <span class="tag tag--default">中小企业</span>
+            </div>
+            <ul class="service-card__list">
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                个人品牌网站
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                企业官网开发
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                Landing Page 设计与开发
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                SEO + 性能优化
+              </li>
+            </ul>
+            <div class="service-card__cta">
+              <a href="services.html#web-development" class="btn btn--secondary btn--sm">
+                了解网站开发
+                <svg class="btn__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 服务3：小程序开发 -->
+          <div class="service-card reveal reveal--d3">
+            <svg class="service-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-smartphone"/></svg>
+            <h3 class="service-card__title">小程序开发</h3>
+            <p class="service-card__intro">
+              微信生态获客利器。预约系统、商城、管理工具——轻量级应用快速上线，零下载成本触达用户。
+            </p>
+            <div class="service-card__clients">
+              <span class="tag tag--default">本地商户</span>
+              <span class="tag tag--default">电商卖家</span>
+              <span class="tag tag--default">服务型公司</span>
+            </div>
+            <ul class="service-card__list">
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                微信小程序开发
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                预约 / 点单系统
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                微信商城
+              </li>
+              <li>
+                <svg class="service-card__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                小程序 + AI 集成
+              </li>
+            </ul>
+            <div class="service-card__cta">
+              <a href="services.html#mini-program" class="btn btn--secondary btn--sm">
+                了解小程序开发
+                <svg class="btn__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第4屏：Why Choose Me ===== -->
+    <section class="section section--alt reveal" aria-labelledby="why-title">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <span class="section__label">Why Choose Me</span>
+          <h2 class="section__title" id="why-title">为什么选择我</h2>
+          <p class="section__subtitle">不是最便宜的，但是最靠谱的</p>
+        </div>
+
+        <div class="grid grid--2 mt-10">
+          <div class="why-item reveal reveal--d1">
+            <svg class="icon icon--md why-item__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-zap"/></svg>
+            <h4>快速交付，不拖工期</h4>
+            <p>从需求沟通到上线交付，每一步都有明确的时间节点。善用 AI 工具提效，同样的质量，更短的时间。简单项目 1-2 周，中等项目 2-4 周。</p>
+          </div>
+          <div class="why-item reveal reveal--d2">
+            <svg class="icon icon--md why-item__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-shield"/></svg>
+            <h4>长期维护，不跑路</h4>
+            <p>交付后提供长期技术支持与维护。代码结构清晰、有注释、有文档——以后换人也能接手。不把你锁死在我的技术栈里。</p>
+          </div>
+          <div class="why-item reveal reveal--d3">
+            <svg class="icon icon--md why-item__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-sparkles"/></svg>
+            <h4>AI 加持，效率翻倍</h4>
+            <p>不只是"会用 ChatGPT"——我深度使用 AI 辅助开发全流程。从代码生成到测试到部署，AI 让开发效率提升 2-3 倍。你的项目享受 AI 时代的速度红利。</p>
+          </div>
+          <div class="why-item reveal reveal--d4">
+            <svg class="icon icon--md why-item__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-message-circle"/></svg>
+            <h4>直接沟通，没有中间商</h4>
+            <p>你直接和我沟通需求，不会出现"销售承诺了但开发做不到"的情况。需求理解准确、反馈及时、修改快速。我 = 产品经理 + 设计师 + 开发者 + 项目经理。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第5屏：Featured Projects ===== -->
+    <section class="section reveal" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Featured Projects</span>
+          <h2 class="section__title" id="projects-title">精选作品</h2>
+          <p class="section__subtitle">每个项目都代表一个被解决的真实问题</p>
+        </div>
+
+        <div class="grid grid--3 mt-10">
+          <!-- 案例1 -->
+          <article class="card card--elevated card--clickable reveal reveal--d1">
+            <a href="projects.html">
+              <div class="card__placeholder">
+                <svg class="icon icon--xl" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-globe"/></svg>
+              </div>
+              <div class="card__body">
+                <div class="card__tags">
+                  <span class="tag tag--accent">网站开发</span>
+                  <span class="tag tag--default">响应式设计</span>
+                  <span class="tag tag--default">SEO 优化</span>
+                </div>
+                <h3 class="card__title">个人品牌官网</h3>
+                <p class="card__description">极简风格的个人品牌网站，展示服务、作品与技术能力，帮助独立开发者建立专业可信的线上形象。</p>
+                <span class="card__link">
+                  查看详情
+                  <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-right"/></svg>
+                </span>
+              </div>
+            </a>
+          </article>
+
+          <!-- 案例2 -->
+          <article class="card card--elevated card--clickable reveal reveal--d2">
+            <a href="projects/project-2.html">
+              <div class="card__placeholder">
+                <svg class="icon icon--xl" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-sparkles"/></svg>
+              </div>
+              <div class="card__body">
+                <div class="card__tags">
+                  <span class="tag tag--accent">AI 自动化</span>
+                  <span class="tag tag--default">小红书</span>
+                  <span class="tag tag--default">Agent</span>
+                </div>
+                <h3 class="card__title">小红书自动化运营</h3>
+                <p class="card__description">AI 驱动的小红书运营助手，自动完成内容创作、排期发布、评论互动与数据分析，帮助创作者高效运营。</p>
+                <span class="card__link">
+                  查看详情
+                  <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-right"/></svg>
+                </span>
+              </div>
+            </a>
+          </article>
+
+          <!-- 案例3 -->
+          <article class="card card--elevated card--clickable reveal reveal--d3">
+            <a href="projects/project-3.html">
+              <div class="card__placeholder">
+                <svg class="icon icon--xl" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-heart"/></svg>
+              </div>
+              <div class="card__body">
+                <div class="card__tags">
+                  <span class="tag tag--accent">小程序</span>
+                  <span class="tag tag--default">情绪记录</span>
+                  <span class="tag tag--default">AI 分析</span>
+                </div>
+                <h3 class="card__title">情绪树洞小程序</h3>
+                <p class="card__description">一个温暖的情绪记录与 AI 分析小程序，帮助用户记录每日心情，通过 AI 提供个性化情绪洞察与建议。</p>
+                <span class="card__link">
+                  查看详情
+                  <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-right"/></svg>
+                </span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第6屏：Workflow ===== -->
+    <section class="section section--alt reveal" aria-labelledby="workflow-title">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <span class="section__label">Workflow</span>
+          <h2 class="section__title" id="workflow-title">合作流程</h2>
+          <p class="section__subtitle">透明、高效——每一步你都清楚我在做什么</p>
+        </div>
+
+        <div class="workflow-grid">
+          <div class="workflow-step reveal reveal--d1">
+            <span class="workflow-step__number">01</span>
+            <h3 class="workflow-step__title">需求沟通</h3>
+            <p class="workflow-step__desc">告诉我你的业务场景和想要解决的问题。聊一聊就知道能不能做。不需要你写需求文档。</p>
+          </div>
+          <div class="workflow-step reveal reveal--d2">
+            <span class="workflow-step__number">02</span>
+            <h3 class="workflow-step__title">方案确认</h3>
+            <p class="workflow-step__desc">我会出一个清晰的方案：做什么、怎么做、用多久、多少钱。你确认后启动。</p>
+          </div>
+          <div class="workflow-step reveal reveal--d3">
+            <span class="workflow-step__number">03</span>
+            <h3 class="workflow-step__title">UI 设计</h3>
+            <p class="workflow-step__desc">先出设计稿，确认视觉方向。设计确认后才进入开发。避免"做出来不好看"。</p>
+          </div>
+          <div class="workflow-step reveal reveal--d4">
+            <span class="workflow-step__number">04</span>
+            <h3 class="workflow-step__title">开发实现</h3>
+            <p class="workflow-step__desc">按确认的方案和设计进行开发。每周同步进度，你随时可以看到演示环境。</p>
+          </div>
+          <div class="workflow-step reveal reveal--d1">
+            <span class="workflow-step__number">05</span>
+            <h3 class="workflow-step__title">测试优化</h3>
+            <p class="workflow-step__desc">功能测试、性能测试、多设备兼容性测试。测试期间发现的问题免费修复。</p>
+          </div>
+          <div class="workflow-step reveal reveal--d2">
+            <span class="workflow-step__number">06</span>
+            <h3 class="workflow-step__title">上线交付</h3>
+            <p class="workflow-step__desc">测试通过，部署上线。交付完整源码、部署文档。上线不是结束——随时可找我。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第7屏：About Me ===== -->
+    <section class="section reveal" aria-labelledby="about-title">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <span class="section__label">About</span>
+          <h2 class="section__title" id="about-title">关于我</h2>
+          <p class="section__subtitle">一个用 AI 和代码解决问题的独立开发者</p>
+        </div>
+
+        <div class="about-text reveal">
+          <p>我是 相逢，一名独立开发者。</p>
+          <p>我专注于 AI 自动化和现代 Web 开发，帮助创作者、自由职业者和小企业用技术解决真实的业务问题。</p>
+          <p>我不做大而全的解决方案——我只做实用、可维护、真正有效的产品。</p>
+          <p>技术变化很快，但我始终相信：好的产品不是堆出来的，而是想出来的。</p>
+          <p>如果你有一个想法需要落地，我很乐意和你聊聊。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第8屏：Skills ===== -->
+    <section class="section section--alt reveal" aria-labelledby="skills-title">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <span class="section__label">Skills</span>
+          <h2 class="section__title" id="skills-title">技术能力</h2>
+          <p class="section__subtitle">持续学习、持续实践、持续交付</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-group reveal reveal--d1">
+            <h4 class="skills-group__title">Frontend</h4>
+            <div class="cluster">
+              <span class="tag tag--default">HTML5</span>
+              <span class="tag tag--default">CSS3</span>
+              <span class="tag tag--default">JavaScript (ES6+)</span>
+              <span class="tag tag--default">响应式设计</span>
+              <span class="tag tag--default">Web 性能优化</span>
+              <span class="tag tag--default">PWA</span>
+            </div>
+          </div>
+
+          <div class="skills-group reveal reveal--d2">
+            <h4 class="skills-group__title">Backend</h4>
+            <div class="cluster">
+              <span class="tag tag--default">Node.js</span>
+              <span class="tag tag--default">Python</span>
+              <span class="tag tag--default">REST API 设计</span>
+              <span class="tag tag--default">数据库设计</span>
+              <span class="tag tag--default">Supabase</span>
+              <span class="tag tag--default">微信云开发</span>
+            </div>
+          </div>
+
+          <div class="skills-group reveal reveal--d3">
+            <h4 class="skills-group__title">AI & Automation</h4>
+            <div class="cluster">
+              <span class="tag tag--accent">LLM 应用开发</span>
+              <span class="tag tag--accent">AI Agent 搭建</span>
+              <span class="tag tag--accent">Prompt Engineering</span>
+              <span class="tag tag--accent">n8n 工作流</span>
+              <span class="tag tag--accent">Dify 平台</span>
+              <span class="tag tag--accent">OpenAI / Claude API</span>
+            </div>
+          </div>
+
+          <div class="skills-group reveal reveal--d4">
+            <h4 class="skills-group__title">Deployment & DevOps</h4>
+            <div class="cluster">
+              <span class="tag tag--default">Vercel</span>
+              <span class="tag tag--default">Cloudflare</span>
+              <span class="tag tag--default">Docker</span>
+              <span class="tag tag--default">Git / GitHub</span>
+              <span class="tag tag--default">CI/CD</span>
+              <span class="tag tag--default">Linux 运维</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第9屏：FAQ ===== -->
+    <section class="section reveal" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <span class="section__label">FAQ</span>
+          <h2 class="section__title" id="faq-title">常见问题</h2>
+          <p class="section__subtitle">关于合作的常见疑问，这里都有答案</p>
+        </div>
+
+        <div class="js-accordion-group mt-10">
+          <!-- FAQ 1 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-1">
+              <span>合作流程是什么样的？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-1" aria-hidden="true">
+              <div class="accordion__content">
+                <p>简单六步：需求沟通 → 方案确认 → UI 设计 → 开发实现 → 测试优化 → 上线交付。每一步你都能看到进展，不用担心进度不透明。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-2">
+              <span>怎么收费？有标准报价吗？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-2" aria-hidden="true">
+              <div class="accordion__content">
+                <p>每个项目需求不同，报价也不同。了解具体需求后，我会出一个详细的报价方案。收费方式灵活：固定价格（适合需求明确的项目）或按时计费（适合需要持续迭代的项目）。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-3">
+              <span>开发一个网站 / 小程序要多久？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-3" aria-hidden="true">
+              <div class="accordion__content">
+                <p>简单项目（如 Landing Page）：1-2 周。中等项目（如企业官网）：2-4 周。复杂项目（如小程序+后台）：4-8 周。具体时间会在方案阶段给出明确的时间线。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-4">
+              <span>交付后不满意怎么办？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-4" aria-hidden="true">
+              <div class="accordion__content">
+                <p>开发过程中会定期同步，确保方向一致，不会出现"做完才说不满意"的情况。交付后通常包含一定次数的免费修改。如果确实不匹配，可以协商退费——但目前为止还没发生过。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-5">
+              <span>后期能帮忙维护吗？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-5" aria-hidden="true">
+              <div class="accordion__content">
+                <p>当然。提供长期维护服务——按次付费或按月合作都可以。交付的代码结构清晰、有注释，你找其他人维护也没问题。不会把你锁死在我这里。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-6">
+              <span>源码会交付给我吗？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-6" aria-hidden="true">
+              <div class="accordion__content">
+                <p>会。所有项目完成后，完整源码连同部署文档一并交付。源码托管在 GitHub（私有仓库），你可以随时查看和下载。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-7">
+              <span>支持远程合作吗？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-7" aria-hidden="true">
+              <div class="accordion__content">
+                <p>支持。我已经和来自不同城市的客户完成过远程项目。沟通主要通过微信 / Zoom / 飞书，异步更新进度。地域不是问题。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-8">
+              <span>付款流程是什么样的？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-8" aria-hidden="true">
+              <div class="accordion__content">
+                <p>通常是分阶段付款：启动时支付一部分，中期支付一部分，验收后支付尾款。具体比例和节点在方案阶段确认，写入合作协议。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-9">
+              <span>你是一个人做还是团队？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-9" aria-hidden="true">
+              <div class="accordion__content">
+                <p>我是一名独立开发者。这意味着你直接和我沟通、需求零损耗、反馈零延迟。如果是大型项目需要团队配合，我可以协调合作的设计师和后端工程师一起参与。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="accordion">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="faq-panel-10">
+              <span>你接什么样的项目？有没有范围限制？</span>
+              <svg class="accordion__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-down"/></svg>
+            </button>
+            <div class="accordion__panel" id="faq-panel-10" aria-hidden="true">
+              <div class="accordion__content">
+                <p>核心范围：AI 自动化、网站开发、小程序开发。超出这个范围的项目——比如纯移动 App 原生开发、大型 SaaS 系统——我会直接告诉你能不能做。能做就接，不能做就推荐其他开发者。不接做不了的项目。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 第10屏：Final CTA ===== -->
+    <section class="section section--alt reveal" aria-labelledby="cta-title">
+      <div class="container container--narrow text-center">
+        <h2 class="section__title" id="cta-title">准备开始你的项目了吗？</h2>
+        <p class="section__subtitle mb-8">
+          让我们一起打造真正优秀的数字产品
+        </p>
+        <div class="hero__actions hero__actions--center">
+          <a href="contact.html" class="btn btn--primary btn--lg">
+            <svg class="btn__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+            立即咨询
+          </a>
+          <a href="projects.html" class="btn btn--secondary btn--lg">
+            查看作品
+          </a>
+        </div>
+        <p class="cta-hint">
+          或发送邮件：<a href="mailto:2370083386@qq.com">2370083386@qq.com</a> / <a href="mailto:xf2370083386@gmail.com">xf2370083386@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <!-- 品牌 -->
+        <div>
+          <div class="footer__brand">相逢</div>
+          <p class="footer__brand-desc">
+            独立开发者，专注 AI 自动化与 Web 开发。<br>
+            帮助创作者和小企业构建真正好用的数字产品。
+          </p>
+        </div>
+
+        <!-- 导航 -->
+        <div>
+          <div class="footer__col-title">导航</div>
+          <div class="footer__links">
+            <a href="index.html">首页</a>
+            <a href="about.html">关于我</a>
+            <a href="services.html">服务</a>
+            <a href="projects.html">作品</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </div>
+
+        <!-- 服务 -->
+        <div>
+          <div class="footer__col-title">服务</div>
+          <div class="footer__links">
+            <a href="services.html#ai-automation">AI 自动化</a>
+            <a href="services.html#web-development">网站开发</a>
+            <a href="services.html#mini-program">小程序开发</a>
+            <a href="projects.html">案例研究</a>
+          </div>
+        </div>
+
+        <!-- 联系方式 -->
+        <div>
+          <div class="footer__col-title">联系方式</div>
+          <div class="footer__links">
+            <a href="https://github.com/chj071024" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-github"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:2370083386@qq.com">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+              QQ 邮箱
+            </a>
+            <a href="mailto:xf2370083386@gmail.com">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+              Gmail
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 相逢. All rights reserved.</span>
+        <span>用 ❤️ 和 AI 构建</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== Back to Top ==================== -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">
+    <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-up"/></svg>
+  </button>
+
+  <!-- ==================== Scripts ==================== -->
+  <script src="js/main.js"></script>
+</body>
+</html>
