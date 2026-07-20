@@ -1,0 +1,168 @@
+/* ========================================
+   Layout CSS — 布局系统
+   容器、网格、Section、两栏布局等
+   ======================================== */
+
+/* ===== Container ===== */
+.container {
+  width: 100%;
+  max-width: var(--max-width-default);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.container--narrow {
+  max-width: var(--max-width-narrow);
+}
+
+.container--wide {
+  max-width: var(--max-width-wide);
+}
+
+/* ===== Section ===== */
+.section {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
+}
+
+.section--tight {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.section--alt {
+  background-color: var(--color-white);
+}
+
+.section--dark {
+  background-color: var(--color-black);
+  color: var(--color-gray-300);
+}
+
+/* ===== Section Header ===== */
+.section__header {
+  text-align: center;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-12);
+}
+
+.section__label {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-3);
+}
+
+.section__title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-4);
+}
+
+.section__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* Section header in dark section */
+.section--dark .section__title {
+  color: var(--color-white);
+}
+
+.section--dark .section__subtitle {
+  color: var(--color-gray-400);
+}
+
+/* ===== Grid System ===== */
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Auto-fit grid (自动响应式，不需要媒体查询) */
+.grid--auto {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* ===== Split Layout (两栏布局) ===== */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.split--reverse .split__media {
+  order: -1;
+}
+
+/* ===== Flow / Stack ===== */
+.flow > * + * {
+  margin-top: var(--space-4);
+}
+
+.flow--lg > * + * {
+  margin-top: var(--space-8);
+}
+
+/* ===== Cluster (Flex 自动换行) ===== */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* ===== Center (绝对居中) ===== */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Inline Center ===== */
+.text-center {
+  text-align: center;
+}
+
+/* ===== Spacing Utilities ===== */
+.mt-8  { margin-top: var(--space-8);  }
+.mt-10 { margin-top: var(--space-10); }
+.mb-4  { margin-bottom: var(--space-4);  }
+.mb-8  { margin-bottom: var(--space-8);  }
+
+/* ===== Switcher (两栏自动切换单栏) ===== */
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.switcher > * {
+  flex-basis: calc((var(--max-width-default) / 2 - 100%) * 999);
+  flex-grow: 1;
+}
