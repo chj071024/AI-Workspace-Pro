@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="相逢的作品 — 个人品牌官网、小红书自动化运营、情绪树洞小程序">
+  <meta name="keywords" content="网站开发,AI自动化,小程序开发,作品案例">
+
+  <meta property="og:title" content="作品 — 相逢">
+  <meta property="og:description" content="个人品牌官网 · 小红书自动化运营 · 情绪树洞小程序">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="作品 — 相逢">
+
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+
+  <title>作品 — 相逢 | 个人品牌官网 · 小红书自动化运营 · 情绪树洞小程序</title>
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/images/icons/icons.svg" as="image" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .projects-hero {
+      padding-top: calc(var(--header-height) + var(--space-20));
+      padding-bottom: var(--space-12);
+    }
+
+    .projects-hero__title {
+      font-size: var(--text-5xl);
+      font-weight: var(--font-bold);
+      color: var(--color-gray-900);
+      line-height: var(--leading-none);
+      letter-spacing: var(--tracking-tighter);
+      margin-bottom: var(--space-4);
+    }
+
+    .projects-hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* Project detail block */
+    .project-block {
+      padding-top: var(--space-16);
+      padding-bottom: var(--space-16);
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+
+    .project-block:last-child {
+      border-bottom: none;
+    }
+
+    .project-block__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      align-items: center;
+    }
+
+    .project-block__image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background-color: var(--color-gray-100);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .project-block__image .icon {
+      width: 56px;
+      height: 56px;
+      color: var(--color-gray-300);
+    }
+
+    .project-block__label {
+      display: inline-block;
+      font-size: var(--text-xs);
+      font-weight: var(--font-semibold);
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      margin-bottom: var(--space-3);
+    }
+
+    .project-block__title {
+      font-size: var(--text-3xl);
+      font-weight: var(--font-semibold);
+      color: var(--color-gray-900);
+      line-height: var(--leading-tight);
+      margin-bottom: var(--space-4);
+    }
+
+    .project-block__desc {
+      font-size: var(--text-lg);
+      color: var(--color-gray-700);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-5);
+    }
+
+    .project-block__highlights {
+      margin-bottom: var(--space-6);
+    }
+
+    .project-block__highlights li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      font-size: var(--text-base);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      padding-bottom: var(--space-2);
+    }
+
+    .project-block__check {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      color: var(--color-accent);
+    }
+
+    .project-block__tech {
+      margin-bottom: var(--space-6);
+    }
+
+    @media (max-width: 1024px) {
+      .project-block__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+
+      .project-block__image {
+        order: -1;
+        aspect-ratio: 16 / 9;
+      }
+
+      .projects-hero__title {
+        font-size: var(--text-4xl);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .projects-hero {
+        padding-top: calc(var(--header-height-mobile) + var(--space-12));
+        padding-bottom: var(--space-8);
+      }
+
+      .projects-hero__title {
+        font-size: var(--text-3xl);
+      }
+
+      .project-block {
+        padding-top: var(--space-10);
+        padding-bottom: var(--space-10);
+      }
+
+      .project-block__title {
+        font-size: var(--text-2xl);
+      }
+
+      .project-block__desc {
+        font-size: var(--text-base);
+      }
+
+      .project-block__image {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-to-content">跳转到主要内容</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="回到首页">相逢</a>
+      <nav class="header__nav" aria-label="主导航">
+        <a href="index.html" data-page="index.html">首页</a>
+        <a href="about.html" data-page="about.html">关于</a>
+        <a href="services.html" data-page="services.html">服务</a>
+        <a href="projects.html" data-page="projects.html" class="active">作品</a>
+        <a href="contact.html" data-page="contact.html">联系</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary btn--sm header__cta">联系我</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">
+        <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
+    <a href="index.html" data-page="index.html">首页</a>
+    <a href="about.html" data-page="about.html">关于</a>
+    <a href="services.html" data-page="services.html">服务</a>
+    <a href="projects.html" data-page="projects.html">作品</a>
+    <a href="contact.html" data-page="contact.html">联系</a>
+    <a href="contact.html" class="btn btn--primary mobile-menu__cta">联系我</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===== Projects Hero ===== -->
+    <section class="projects-hero" aria-labelledby="projects-hero-title">
+      <div class="container container--narrow text-center">
+        <span class="section__label">Projects</span>
+        <h1 class="projects-hero__title" id="projects-hero-title">我的作品</h1>
+        <p class="projects-hero__subtitle">
+          每个项目都代表一个被解决的真实问题。这里展示的是我独立完成的代表性作品。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 作品1：个人品牌官网 ===== -->
+    <section class="project-block section--alt" aria-labelledby="p1-title">
+      <div class="container container--narrow">
+        <div class="project-block__grid">
+          <div class="project-block__image">
+            <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-globe"/></svg>
+          </div>
+          <div>
+            <span class="project-block__label">Website</span>
+            <h2 class="project-block__title" id="p1-title">个人品牌官网</h2>
+            <p class="project-block__desc">
+              极简风格的个人品牌网站，展示服务、作品与技术能力，帮助独立开发者建立专业可信的线上形象。
+            </p>
+            <ul class="project-block__highlights">
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>纯原生 HTML/CSS/JS 开发，零框架依赖，加载速度极快</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>Lighthouse 性能评分 95+，SEO 语义化结构完整</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>响应式设计，桌面端/平板/手机三端完美适配</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>模块化 CSS 架构，BEM 命名，Design Token 体系</span>
+              </li>
+            </ul>
+            <div class="project-block__tech">
+              <div class="cluster">
+                <span class="tag tag--accent">网站开发</span>
+                <span class="tag tag--default">HTML5</span>
+                <span class="tag tag--default">CSS3</span>
+                <span class="tag tag--default">JavaScript</span>
+                <span class="tag tag--default">响应式设计</span>
+                <span class="tag tag--default">SEO 优化</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 作品2：小红书自动化运营 ===== -->
+    <section class="project-block" aria-labelledby="p2-title">
+      <div class="container container--narrow">
+        <div class="project-block__grid">
+          <div class="project-block__image">
+            <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-sparkles"/></svg>
+          </div>
+          <div>
+            <span class="project-block__label">AI Automation</span>
+            <h2 class="project-block__title" id="p2-title">小红书自动化运营</h2>
+            <p class="project-block__desc">
+              AI 驱动的小红书运营助手，自动完成内容创作、排期发布、评论互动与数据分析，帮助创作者高效运营账号。
+            </p>
+            <ul class="project-block__highlights">
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>AI 自动生成小红书风格文案与图片，保持账号人设一致性</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>智能排期系统，根据粉丝活跃时段自动选择最佳发布时间</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>评论自动回复 + 情感分析，及时互动不遗漏任何粉丝</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>数据看板：涨粉趋势、爆款分析、竞品监控，一目了然</span>
+              </li>
+            </ul>
+            <div class="project-block__tech">
+              <div class="cluster">
+                <span class="tag tag--accent">AI 自动化</span>
+                <span class="tag tag--default">n8n</span>
+                <span class="tag tag--default">Claude API</span>
+                <span class="tag tag--default">Python</span>
+                <span class="tag tag--default">小红书 API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 作品3：情绪树洞小程序 ===== -->
+    <section class="project-block section--alt" aria-labelledby="p3-title">
+      <div class="container container--narrow">
+        <div class="project-block__grid">
+          <div class="project-block__image">
+            <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-heart"/></svg>
+          </div>
+          <div>
+            <span class="project-block__label">Mini Program</span>
+            <h2 class="project-block__title" id="p3-title">情绪树洞小程序</h2>
+            <p class="project-block__desc">
+              一个温暖的情绪记录与 AI 分析小程序，帮助用户记录每日心情，通过 AI 提供个性化情绪洞察与建议。
+            </p>
+            <ul class="project-block__highlights">
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>简洁治愈的 UI 设计，引导用户轻松完成每日心情打卡</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>AI 情绪分析引擎，基于日记内容生成每周情绪趋势报告</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>个性化 AI 建议：根据情绪模式推荐冥想、音乐、阅读内容</span>
+              </li>
+              <li>
+                <svg class="project-block__check" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-check"/></svg>
+                <span>数据安全第一：用户数据加密存储，支持随时导出或删除</span>
+              </li>
+            </ul>
+            <div class="project-block__tech">
+              <div class="cluster">
+                <span class="tag tag--accent">小程序</span>
+                <span class="tag tag--default">微信云开发</span>
+                <span class="tag tag--default">AI 情绪分析</span>
+                <span class="tag tag--default">数据可视化</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section" aria-labelledby="project-cta-title">
+      <div class="container container--narrow text-center">
+        <h2 class="section__title" id="project-cta-title">有类似的项目需求？</h2>
+        <p class="section__subtitle mb-8">每个项目都是从一句"这个能做吗"开始的，欢迎来聊聊你的想法</p>
+        <a href="contact.html" class="btn btn--primary btn--lg">
+          <svg class="btn__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+          联系我
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">相逢</div>
+          <p class="footer__brand-desc">
+            独立开发者，专注 AI 自动化与 Web 开发。<br>
+            帮助创作者和小企业构建真正好用的数字产品。
+          </p>
+        </div>
+        <div>
+          <div class="footer__col-title">导航</div>
+          <div class="footer__links">
+            <a href="index.html">首页</a>
+            <a href="about.html">关于我</a>
+            <a href="services.html">服务</a>
+            <a href="projects.html">作品</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">服务</div>
+          <div class="footer__links">
+            <a href="services.html#ai-automation">AI 自动化</a>
+            <a href="services.html#web-development">网站开发</a>
+            <a href="services.html#mini-program">小程序开发</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">联系方式</div>
+          <div class="footer__links">
+            <a href="https://github.com/chj071024" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-github"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:2370083386@qq.com">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+              QQ 邮箱
+            </a>
+            <a href="mailto:xf2370083386@gmail.com">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+              Gmail
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 相逢. All rights reserved.</span>
+        <span>用 &hearts; 和 AI 构建</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">
+    <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-up"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "CHJ",
+  "title": "独立开发者",
+  "tagline": "AI自动化 · 网站开发 · 小程序开发 · AI Agent搭建",
+  "description": "独立开发者，专注为创作者和小企业提供 AI 自动化、网站开发、小程序开发与 AI Agent 搭建服务",
+  "email": "hello@yourdomain.com",
+  "domain": "https://yourdomain.com",
+  "social": {
+    "github": "https://github.com/yourusername",
+    "twitter": "https://twitter.com/yourusername"
+  },
+  "foundedYear": 2026
+}

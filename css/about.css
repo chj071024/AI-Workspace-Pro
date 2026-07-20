@@ -1,0 +1,287 @@
+/* ========================================
+   About CSS — 关于页面专属样式
+   Hero / Philosophy / Who I Help / What I Do
+   Process / Tech Stack / Currently / Forward / CTA
+   ======================================== */
+
+/* ==========================================
+   1. About Hero — 纯文字、窄栏、极简
+   ========================================== */
+
+.about-hero {
+  padding-top: calc(var(--header-height) + var(--space-32));
+  padding-bottom: var(--space-32);
+}
+
+.about-hero__title {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  color: var(--color-gray-900);
+  line-height: var(--leading-none);
+  letter-spacing: var(--tracking-tighter);
+  margin-bottom: var(--space-5);
+  animation: aboutHeroFadeIn 500ms var(--ease-out) both;
+}
+
+.about-hero__subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+  animation: aboutHeroFadeIn 500ms var(--ease-out) 150ms both;
+}
+
+@keyframes aboutHeroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ==========================================
+   2. Philosophy — 编号列表
+   ========================================== */
+
+.philosophy-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  margin-top: var(--space-10);
+}
+
+.philosophy-item__number {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.philosophy-item__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.philosophy-item__desc {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* ==========================================
+   3. Who I Help — 6 张小卡片
+   ========================================== */
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-10);
+}
+
+.audience-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-6);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+.audience-card:hover {
+  border-color: var(--color-gray-300);
+  transform: translateY(-2px);
+}
+
+.audience-card__icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.audience-card__type {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.audience-card__need {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* ==========================================
+   4. What I Do — 3 张横向能力卡片
+   ========================================== */
+
+.capability-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.capability-card {
+  padding: var(--space-8);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-fast);
+}
+
+.capability-card:hover {
+  border-color: var(--color-gray-300);
+}
+
+.capability-card__title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.capability-card__desc {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+/* ==========================================
+   5. Process — 复用首页 workflow-grid
+   6. Tech Stack — 复用首页 skills-grid
+   ========================================== */
+
+/* ==========================================
+   7. Currently — 3 张横向关注卡片
+   ========================================== */
+
+.currently-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-top: var(--space-10);
+}
+
+.currently-item {
+  display: flex;
+  gap: var(--space-5);
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.currently-item:last-child {
+  border-bottom: none;
+}
+
+.currently-item__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-accent);
+  margin-top: 2px;
+}
+
+.currently-item__title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.currently-item__desc {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* ==========================================
+   8. Looking Forward — 文字块
+   ========================================== */
+
+.forward-text {
+  font-size: var(--text-lg);
+  color: var(--color-gray-700);
+  line-height: var(--leading-loose);
+}
+
+.forward-text p {
+  margin-bottom: var(--space-5);
+}
+
+.forward-text p:last-child {
+  margin-bottom: 0;
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+}
+
+.forward-text ul {
+  margin: var(--space-5) 0;
+}
+
+.forward-text ul li {
+  font-size: var(--text-base);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+  padding-bottom: var(--space-2);
+}
+
+/* ==========================================
+   9. Responsive
+   ========================================== */
+
+@media (max-width: 1024px) {
+  .audience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-hero__title {
+    font-size: var(--text-4xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding-top: calc(var(--header-height-mobile) + var(--space-16));
+    padding-bottom: var(--space-16);
+  }
+
+  .about-hero__title {
+    font-size: var(--text-3xl);
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-list {
+    gap: var(--space-8);
+  }
+
+  .philosophy-item__number {
+    font-size: var(--text-2xl);
+  }
+
+  .capability-card {
+    padding: var(--space-6);
+  }
+
+  .capability-card__title {
+    font-size: var(--text-lg);
+  }
+
+  .currently-item {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .forward-text {
+    font-size: var(--text-base);
+  }
+}
