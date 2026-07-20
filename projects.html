@@ -76,11 +76,15 @@
       background-color: var(--color-gray-100);
       border: 1px solid var(--color-gray-200);
       border-radius: var(--radius-xl);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
+    }
+
+    .project-block__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .project-block__image .icon {
@@ -235,7 +239,7 @@
       <div class="container container--narrow">
         <div class="project-block__grid">
           <div class="project-block__image">
-            <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-globe"/></svg>
+            <img src="img/个人网页.png" alt="个人品牌官网截图">
           </div>
           <div>
             <span class="project-block__label">Website</span>
@@ -281,7 +285,7 @@
       <div class="container container--narrow">
         <div class="project-block__grid">
           <div class="project-block__image">
-            <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-sparkles"/></svg>
+            <img src="img/22de55d3189460b4891e7b8646206906.jpg" alt="小红书自动化运营截图">
           </div>
           <div>
             <span class="project-block__label">AI Automation</span>
@@ -326,7 +330,7 @@
       <div class="container container--narrow">
         <div class="project-block__grid">
           <div class="project-block__image">
-            <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-heart"/></svg>
+            <img src="img/小程序.jpg" alt="情绪树洞小程序截图">
           </div>
           <div>
             <span class="project-block__label">Mini Program</span>
@@ -422,6 +426,10 @@
             <a href="mailto:xf2370083386@gmail.com">
               <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
               Gmail
+            </a>
+            <a href="contact.html">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-message-circle"/></svg>
+              微信
             </a>
           </div>
         </div>

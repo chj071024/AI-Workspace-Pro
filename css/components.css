@@ -653,6 +653,32 @@
   margin-right: 4px;
 }
 
+/* WeChat QR in footer / CTA */
+.footer__qrcode {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  object-fit: cover;
+  margin-top: var(--space-3);
+  opacity: 0.85;
+  transition: opacity var(--transition-fast);
+}
+
+.footer__qrcode:hover {
+  opacity: 1;
+}
+
+.cta-qrcode {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-200);
+  object-fit: cover;
+  margin: var(--space-5) auto 0;
+  display: block;
+}
+
 .footer__links a {
   font-size: var(--text-sm);
   color: var(--color-gray-400);

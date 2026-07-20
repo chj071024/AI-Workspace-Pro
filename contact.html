@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="联系相逢 — 独立开发者，AI自动化 · 网站开发 · 小程序开发，微信或邮箱直接联系">
+  <meta name="keywords" content="联系,独立开发者,AI自动化,网站开发,小程序开发">
+
+  <meta property="og:title" content="联系 — 相逢">
+  <meta property="og:description" content="微信或邮箱直接联系，24小时内回复">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="联系 — 相逢">
+
+  <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)">
+
+  <title>联系 — 相逢 | 独立开发者</title>
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/images/icons/icons.svg" as="image" type="image/svg+xml">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* ===== Contact Hero ===== */
+    .contact-hero {
+      padding-top: calc(var(--header-height) + var(--space-32));
+      padding-bottom: var(--space-16);
+    }
+
+    .contact-hero__title {
+      font-size: var(--text-5xl);
+      font-weight: var(--font-bold);
+      color: var(--color-gray-900);
+      line-height: var(--leading-none);
+      letter-spacing: var(--tracking-tighter);
+      margin-bottom: var(--space-4);
+      animation: contactFadeIn 500ms var(--ease-out) both;
+    }
+
+    .contact-hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-gray-600);
+      line-height: var(--leading-relaxed);
+      max-width: 480px;
+      margin: 0 auto;
+      animation: contactFadeIn 500ms var(--ease-out) 150ms both;
+    }
+
+    @keyframes contactFadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* ===== Contact Methods ===== */
+    .contact-methods {
+      padding-top: var(--space-6);
+      padding-bottom: var(--space-24);
+    }
+
+    .contact-methods__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      align-items: start;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* WeChat Card */
+    .contact-card {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-gray-200);
+      border-radius: var(--radius-xl);
+      padding: var(--space-10);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-card__icon {
+      width: 40px;
+      height: 40px;
+      color: var(--color-accent);
+      margin: 0 auto var(--space-4);
+    }
+
+    .contact-card__title {
+      font-size: var(--text-xl);
+      font-weight: var(--font-semibold);
+      color: var(--color-gray-900);
+      margin-bottom: var(--space-2);
+    }
+
+    .contact-card__desc {
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+      margin-bottom: var(--space-6);
+    }
+
+    .contact-card__qrcode {
+      width: 180px;
+      height: 180px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-gray-200);
+      object-fit: cover;
+      margin: 0 auto var(--space-4);
+      display: block;
+    }
+
+    .contact-card__qrcode-hint {
+      font-size: var(--text-xs);
+      color: var(--color-gray-400);
+    }
+
+    /* Email Card */
+    .contact-card__email-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .contact-card__email {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-4);
+      background-color: var(--color-gray-50);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: background-color var(--transition-fast);
+      color: var(--color-gray-700);
+      font-size: var(--text-sm);
+      font-family: var(--font-mono);
+      word-break: break-all;
+    }
+
+    .contact-card__email:hover {
+      background-color: var(--color-accent-bg);
+      color: var(--color-accent);
+    }
+
+    .contact-card__email .icon {
+      flex-shrink: 0;
+    }
+
+    /* Response Time */
+    .contact-response {
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--space-10);
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-gray-200);
+    }
+
+    .contact-response__text {
+      font-size: var(--text-sm);
+      color: var(--color-gray-500);
+      line-height: var(--leading-relaxed);
+    }
+
+    .contact-response__text + .contact-response__text {
+      margin-top: var(--space-2);
+    }
+
+    .contact-response__text strong {
+      color: var(--color-gray-700);
+    }
+
+    @media (max-width: 640px) {
+      .contact-hero {
+        padding-top: calc(var(--header-height-mobile) + var(--space-16));
+        padding-bottom: var(--space-10);
+      }
+
+      .contact-hero__title {
+        font-size: var(--text-3xl);
+      }
+
+      .contact-methods__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+
+      .contact-card {
+        padding: var(--space-8);
+      }
+
+      .contact-card__qrcode {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-to-content">跳转到主要内容</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="回到首页">相逢</a>
+      <nav class="header__nav" aria-label="主导航">
+        <a href="index.html" data-page="index.html">首页</a>
+        <a href="about.html" data-page="about.html">关于</a>
+        <a href="services.html" data-page="services.html">服务</a>
+        <a href="projects.html" data-page="projects.html">作品</a>
+        <a href="contact.html" data-page="contact.html" class="active">联系</a>
+      </nav>
+      <a href="contact.html" class="btn btn--primary btn--sm header__cta">联系我</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">
+        <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" inert>
+    <a href="index.html" data-page="index.html">首页</a>
+    <a href="about.html" data-page="about.html">关于</a>
+    <a href="services.html" data-page="services.html">服务</a>
+    <a href="projects.html" data-page="projects.html">作品</a>
+    <a href="contact.html" data-page="contact.html">联系</a>
+    <a href="contact.html" class="btn btn--primary mobile-menu__cta">联系我</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===== Contact Hero ===== -->
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+      <div class="container container--narrow text-center">
+        <span class="section__label">Contact</span>
+        <h1 class="contact-hero__title" id="contact-hero-title">联系我</h1>
+        <p class="contact-hero__subtitle">
+          有项目想聊聊？直接扫码或发邮件，我会在 24 小时内回复你。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Contact Methods ===== -->
+    <section class="contact-methods">
+      <div class="container">
+        <div class="contact-methods__grid">
+
+          <!-- 微信 -->
+          <div class="contact-card">
+            <svg class="contact-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-message-circle"/></svg>
+            <h2 class="contact-card__title">微信</h2>
+            <p class="contact-card__desc">扫码添加，直接沟通</p>
+            <img src="img/微信.jpg" alt="微信二维码" class="contact-card__qrcode">
+            <p class="contact-card__qrcode-hint">扫码添加微信好友</p>
+          </div>
+
+          <!-- 邮箱 -->
+          <div class="contact-card">
+            <svg class="contact-card__icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+            <h2 class="contact-card__title">邮箱</h2>
+            <p class="contact-card__desc">发送邮件，详细描述你的需求</p>
+            <div class="contact-card__email-list">
+              <a href="mailto:2370083386@qq.com" class="contact-card__email">
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+                2370083386@qq.com
+              </a>
+              <a href="mailto:xf2370083386@gmail.com" class="contact-card__email">
+                <svg class="icon icon--sm" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+                xf2370083386@gmail.com
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 回复时间 -->
+        <div class="contact-response">
+          <p class="contact-response__text">
+            <strong>响应时间：</strong>通常 24 小时内回复（周末可能稍慢）。
+          </p>
+          <p class="contact-response__text">
+            建议通过邮件发送项目需求概要，这样我可以在第一次回复时给出更准确的评估。
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">相逢</div>
+          <p class="footer__brand-desc">
+            独立开发者，专注 AI 自动化与 Web 开发。<br>
+            帮助创作者和小企业构建真正好用的数字产品。
+          </p>
+        </div>
+        <div>
+          <div class="footer__col-title">导航</div>
+          <div class="footer__links">
+            <a href="index.html">首页</a>
+            <a href="about.html">关于我</a>
+            <a href="services.html">服务</a>
+            <a href="projects.html">作品</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">服务</div>
+          <div class="footer__links">
+            <a href="services.html#ai-automation">AI 自动化</a>
+            <a href="services.html#web-development">网站开发</a>
+            <a href="services.html#mini-program">小程序开发</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">联系方式</div>
+          <div class="footer__links">
+            <a href="https://github.com/chj071024" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-github"/></svg>
+              GitHub
+            </a>
+            <a href="mailto:2370083386@qq.com">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+              QQ 邮箱
+            </a>
+            <a href="mailto:xf2370083386@gmail.com">
+              <svg class="icon icon--sm footer__link-icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-mail"/></svg>
+              Gmail
+            </a>
+          </div>
+          <img src="img/微信.jpg" alt="微信联系方式" class="footer__qrcode" loading="lazy">
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 相逢. All rights reserved.</span>
+        <span>用 &hearts; 和 AI 构建</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">
+    <svg class="icon" aria-hidden="true"><use href="assets/images/icons/icons.svg#icon-arrow-up"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
